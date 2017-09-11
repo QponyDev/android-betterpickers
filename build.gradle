@@ -19,15 +19,9 @@ buildscript {
 
 allprojects {
 
-    version = VERSION_NAME
-    group = GROUP
     repositories {
         jcenter()
         mavenLocal()
         mavenCentral()
     }
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '3.2'
 }
