@@ -9,9 +9,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
-        // to auto install sdk components when building see #248
-        // classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.12.+'
-        classpath 'com.github.plastiv:sdk-manager-plugin:b04aea1cddf87e78db9a4372794d678f9e568c48'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
 
 
         // NOTE: Do not place your application dependencies here; they belong
