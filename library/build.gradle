@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-apply from: 'https://raw.githubusercontent.com/shamanland/gradle-mvn-push/master/gradle-mvn-push.gradle' //contains fix for javadoc issues
-
 
 android {
 
@@ -18,6 +16,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            lintOptions {
+                checkReleaseBuilds false
+                disable 'MissingTranslation'
+                abortOnError false
+            }
         }
     }
 
@@ -30,6 +34,8 @@ android {
     }
 
     lintOptions {
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
         abortOnError false
     }
 }
@@ -38,5 +44,4 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.android.support:appcompat-v7:25.0.1'
-    compile 'com.android.support:support-annotations:25.0.1'
 }
